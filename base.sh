@@ -4,7 +4,7 @@
 
 [ -z $bpm ] && bpm=140
 [ -z $timesig ] && timesig="4/4"
-[ -z $calcscale ] && calcscale=4
+[ -z $calcscale ] && calcscale=16
 [ -z $notesdir ] && notesdir="xylo/A"
 [ -z $notecmd ] && notecmd="play"
 
@@ -14,15 +14,29 @@ init_rhythm ()
 {
 	# computing quarter note
 	quarter=`echo "scale=$calcscale;1/$bpm*60" | bc`
+
 	# computing other notes in terms of quarter
 	eighth=`echo "scale=$calcscale;$quarter/2" | bc`
 	sixteenth=`echo "scale=$calcscale;$quarter/4" | bc`
 	half=`echo "scale=$calcscale;$quarter*2" | bc`
 	whole=`echo "scale=$calcscale;$quarter*4" | bc`
+
 	# dotted notes
+	dottedhalf=`echo "scale=$calcscale;$half+$quarter" | bc`
 	dottedquarter=`echo "scale=$calcscale;$quarter+$eighth" | bc`
 	dottedeighth=`echo "scale=$calcscale;$eighth+$sixteenth" | bc`
-	dottedhalf=`echo "scale=$calcscale;$half+$quarter" | bc`
+	dottedsixteenth=`echo "scale=$calcscale;$half+$quarter" | bc`
+
+	# triplets
+	halftriplet=`echo "scale=$calcscale;$whole/3" | bc`
+	quartertriplet=`echo "scale=$calcscale;$half/3" | bc`
+	eighthtriplet=`echo "scale=$calcscale;$quarter/3" | bc`
+	sixteenthtriplet=`echo "scale=$calcscale;$eighth/3" | bc`
+
+	# quintuplets
+	quarterquintuplet=`echo "scale=$calcscale;$whole/5" | bc`
+	eighthquintuplet=`echo "scale=$calcscale;$half/5" | bc`
+	sixteenthquintuplet=`echo "scale=$calcscale;$quarter/5" | bc`
 }
 
 ### note files ###
