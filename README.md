@@ -1,6 +1,6 @@
 # POSIX-music
 POSIX-music is a bash script and example sound files for arranging music with shell scripts.  
-This script is nearly completely POSIX-compliant.  _nearly._  If if weren't for one line.  
+This script is nearly completely POSIX-compliant.  _nearly._  If it weren't for one line.  
 
 ## Dependencies
 ``bash``, of course.  

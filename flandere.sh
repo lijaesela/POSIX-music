@@ -1,23 +1,24 @@
-#!/bin/bash
+#!/bin/bash --posix
 . ./base.sh
 
 bpm=140
 timesig="5/4"
 calcscale=64
 notecmd="play"
+notesdir="xylo/D"
 
 init_rhythm
 init_pitch
 
 bass1 ()
 {
-	echo 1
+	#echo 1
 	pr $note5 $dottedquarter
 	pr $note12 $quarter
 	pr $note17 $eighth
 	pr $note3 $quarter
 	pr $note3 $quarter
-	echo 2
+	#echo 2
 	pr $note5 $dottedquarter
 	pr $note12 $quarter
 	pr $note17 $eighth
@@ -27,13 +28,13 @@ bass1 ()
 
 bass1alt1 ()
 {
-	echo 1
+	#echo 1
 	pr $note1 $dottedquarter
 	pr $note8 $quarter
 	pr $note13 $eighth
 	pr $note3 $quarter
 	pr $note3 $quarter
-	echo 2
+	#echo 2
 	pr $note1 $dottedquarter
 	pr $note8 $quarter
 	pr $note13 $eighth
@@ -43,6 +44,7 @@ bass1alt1 ()
 
 melody1 ()
 {
+	#echo 1
 	pr $note32 $sixteenth
 	pr $note29 $sixteenth
 	pr $note24 $sixteenth
@@ -58,6 +60,7 @@ melody1 ()
 	pr "$note31 $note27 $note22" $quartertriplet
 	pr "$note31 $note27 $note22" $quartertriplet
 	pr "$note31 $note27 $note22" $quartertriplet
+	#echo 1
 	pr $note32 $sixteenth
 	pr $note29 $sixteenth
 	pr $note24 $sixteenth
@@ -77,6 +80,7 @@ melody1 ()
 
 melody1alt1 ()
 {
+	#echo 1
 	pr $note32 $sixteenth
 	pr $note29 $sixteenth
 	pr $note24 $sixteenth
@@ -92,6 +96,7 @@ melody1alt1 ()
 	pr "$note31 $note27 $note22" $quartertriplet
 	pr "$note34 $note31 $note27" $quartertriplet
 	pr "$note39 $note34 $note31" $quartertriplet
+	#echo 1
 	pr $note32 $sixteenth
 	pr $note29 $sixteenth
 	pr $note24 $sixteenth
@@ -111,11 +116,16 @@ melody1alt1 ()
 
 ### arrangement ###
 
+echo 1
 bass1 &
 melody1
+echo 2
 bass1 &
 melody1
+echo 3
 bass1alt1 &
 melody1
+echo 4
 bass1 &
 melody1alt1
+echo done

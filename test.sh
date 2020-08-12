@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash --posix
 
 # source "base.sh" to import all of the tools we need
 . ./base.sh
