@@ -1,4 +1,4 @@
-#!/bin/bash --posix
+#!/bin/sh
 
 # source "base.sh" to import all of the tools we need
 . ./base.sh
@@ -45,7 +45,7 @@ pr $note17 $eighth
 pr $note20 $eighth
 pr $note24 $eighth
 
-r $eighth
+sleep $eighth
 pr $note24 $eighth
 
 pr $note20 $eighth
@@ -60,7 +60,7 @@ pr $note17 $eighth
 pr $note20 $eighth
 pr $note24 $eighth
 
-r $eighth
+sleep $eighth
 pr $note24 $eighth
 
 pr $note20 $eighth
@@ -75,9 +75,9 @@ pr $note18 $eighth
 pr $note22 $eighth
 pr $note25 $eighth
 
-r $quarter
+sleep $quarter
 
-r $quarter
+sleep $quarter
 
 #
 ii &
@@ -88,10 +88,10 @@ pr $note18 $eighth
 pr $note22 $eighth
 pr $note25 $eighth
 
-r $eighth
+sleep $eighth
 pr $note29 $eighth
 
-r $quarter
+sleep $quarter
 
 # tempo change!
 bpm=140
@@ -108,7 +108,7 @@ pr $note17 $eighth
 pr $note20 $eighth
 pr $note24 $eighth
 
-r $eighth
+sleep $eighth
 pr $note24 $eighth
 
 pr $note20 $eighth
@@ -123,7 +123,7 @@ pr $note17 $eighth
 pr $note20 $eighth
 pr $note24 $eighth
 
-r $eighth
+sleep $eighth
 pr $note24 $eighth
 
 pr $note20 $eighth
@@ -138,9 +138,9 @@ pr $note18 $eighth
 pr $note22 $eighth
 pr $note25 $eighth
 
-r $quarter
+sleep $quarter
 
-r $quarter
+sleep $quarter
 
 #
 ii &
@@ -151,10 +151,10 @@ pr $note18 $eighth
 pr $note22 $eighth
 pr $note25 $eighth
 
-r $eighth
+sleep $eighth
 pr $note29 $eighth
 
-r $quarter
+sleep $quarter
 
 #
 p $note1

@@ -1,4 +1,4 @@
-#!/bin/bash --posix
+#!/bin/sh
 . ./base.sh
 
 bpm=140

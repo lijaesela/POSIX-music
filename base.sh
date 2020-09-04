@@ -1,4 +1,4 @@
-#!/bin/bash --posix
+#!/bin/sh
 
 ### defaults ###
 
@@ -45,8 +45,7 @@ init_pitch ()
 {
 	i=1
 	while [ $i -lt $(expr $(ls $notesdir | wc -l) + 1) ]; do
-		# this script can't be posix because of this one fucking line
-		printf -v note$i $notesdir/$i.wav
+		eval "note${i}="$notesdir/${i}.wav
 		i=`expr $i + 1`
 	done
 }
@@ -60,12 +59,6 @@ p ()
 	do
 		$notecmd $i &> /dev/null &
 	done
-}
-
-# alias for sleep
-r ()
-{
-	sleep $@
 }
 
 # play notes and rest
