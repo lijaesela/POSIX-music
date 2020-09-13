@@ -3,7 +3,6 @@ POSIX-music is a bash script and example sound files for arranging music with sh
 This script is nearly completely POSIX-compliant.  _nearly._  If it weren't for one line.  
 
 ## Dependencies
-``bash``, of course.  
 You will need ``bc`` for calculating note lengths.  
 Finally, you will need some kind of command to play sound files.  By default, ``play`` from the package ``sox`` will be used.  
 If you run Arch, these can simply be installed with:
