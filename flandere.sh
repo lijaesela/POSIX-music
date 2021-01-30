@@ -4,7 +4,7 @@
 bpm=140
 timesig="5/4"
 calcscale=64
-notecmd="play"
+notecmd="aplay"
 notesdir="xylo/D"
 
 init_rhythm

@@ -6,7 +6,7 @@
 [ -z $timesig ] && timesig="4/4"
 [ -z $calcscale ] && calcscale=16
 [ -z $notesdir ] && notesdir="xylo/A"
-[ -z $notecmd ] && notecmd="play"
+[ -z $notecmd ] && notecmd="aplay"
 
 ### time ###
 
@@ -57,7 +57,7 @@ p ()
 {
 	for i in $@
 	do
-		$notecmd $i &> /dev/null &
+		($notecmd $i &> /dev/null)
 	done
 }
 
